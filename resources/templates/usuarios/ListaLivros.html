@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>  	<title>Banco da Biblioteca</title>  </head>
+<body>	
+	<h3>Lista de Livros </h3>	
+	<p>id&emsp; Nome   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Autor&emsp;&emsp;&emsp;
+	&emsp;&emsp;&emsp;	Editora	&emsp;&emsp;&emsp;
+	&emsp;&emsp;&emsp; Ano&emsp;&emsp;&emsp;
+	&emsp;&emsp;&emsp;ISBN</p>	<hr>	
+	<div th:each="biblioteca : ${Biblioteca}">		 
+		<div class="row">				
+			 <p>
+                <span th:text="${biblioteca.id}"></span> &emsp;
+				<span th:text="${biblioteca.nome}"></span> &emsp;
+			 	<span th:text="${biblioteca.autor}"></span>&emsp;&emsp;&emsp;&emsp;
+			 	 <span th:text="${biblioteca.editora}"></span> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+				<span th:text="${biblioteca.ano}"></span> &emsp;&emsp;&emsp;&emsp;&emsp;
+			 	<span th:text="${biblioteca.Isbn}"></span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+			 </p>
+		</div>
+	</div>
+</body>
+</html>
